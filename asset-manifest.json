@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Tech_Salaries_Dashboard/static/css/main.0f188c34.chunk.css",
+    "main.js": "/Tech_Salaries_Dashboard/static/js/main.a43a136e.chunk.js",
+    "main.js.map": "/Tech_Salaries_Dashboard/static/js/main.a43a136e.chunk.js.map",
+    "runtime-main.js": "/Tech_Salaries_Dashboard/static/js/runtime-main.5c455e2a.js",
+    "runtime-main.js.map": "/Tech_Salaries_Dashboard/static/js/runtime-main.5c455e2a.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/Tech_Salaries_Dashboard/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.61b26edf.chunk.js": "/Tech_Salaries_Dashboard/static/js/2.61b26edf.chunk.js",
+    "static/js/2.61b26edf.chunk.js.map": "/Tech_Salaries_Dashboard/static/js/2.61b26edf.chunk.js.map",
+    "index.html": "/Tech_Salaries_Dashboard/index.html",
+    "precache-manifest.6306a90aa49a435f79b84af2a5d80308.js": "/Tech_Salaries_Dashboard/precache-manifest.6306a90aa49a435f79b84af2a5d80308.js",
+    "service-worker.js": "/Tech_Salaries_Dashboard/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/Tech_Salaries_Dashboard/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.0f188c34.chunk.css.map": "/Tech_Salaries_Dashboard/static/css/main.0f188c34.chunk.css.map",
+    "static/js/2.61b26edf.chunk.js.LICENSE.txt": "/Tech_Salaries_Dashboard/static/js/2.61b26edf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5c455e2a.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.61b26edf.chunk.js",
+    "static/css/main.0f188c34.chunk.css",
+    "static/js/main.a43a136e.chunk.js"
+  ]
+}
