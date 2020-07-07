@@ -41,8 +41,8 @@ const ControlRow = ({
 };
 
 const Controls = ({ data, updateDataFilter }) => {
+    let locationHash = window.location.hash.replace("#", "").split("-");
 
-    let locationHash = window.location.hash.replace("#", "").split("-")
     const [filteredBy, setFilteredBy] = useState({
         year: locationHash[0] || "*",
         USstate: locationHash[1] || "*",
@@ -56,9 +56,9 @@ const Controls = ({ data, updateDataFilter }) => {
 
     function reportUpdateUpTheChain() {
         window.location.hash = [
-            filteredBy.year || "*",
-            filteredBy.USstate || "*",
-            filteredBy.jobTitle || "*",
+            filteredBy.year,
+            filteredBy.USstate,
+            filteredBy.jobTitle,
         ].join("-");
 
         const filter = (d) =>
@@ -118,9 +118,14 @@ const Controls = ({ data, updateDataFilter }) => {
     };
 
     useEffect(() => {
+        reportUpdateUpTheChain();
+    }, [filteredBy, filterFunctions]);
+
+    useEffect(() => {
         let [year, USstate, jobTitle] = window.location.hash
             .replace("#", "")
             .split("-");
+
         if (year !== "*" && year) {
             updateYearFilter(Number(year));
         }
@@ -130,13 +135,11 @@ const Controls = ({ data, updateDataFilter }) => {
         if (jobTitle !== "*" && jobTitle) {
             updateJobTitleFilter(jobTitle);
         }
+    }, []);
 
-        reportUpdateUpTheChain();
-    }, [filteredBy, filterFunctions]);
-
-    const years = new Set(data.map((d) => d.submit_date.getFullYear()))
-    const jobTitles = new Set(data.map((d) => d.clean_job_title))
-    const USstates = new Set(data.map((d) => d.USstate))
+    const years = new Set(data.map((d) => d.submit_date.getFullYear())),
+        jobTitles = new Set(data.map((d) => d.clean_job_title)),
+        USstates = new Set(data.map((d) => d.USstate));
 
     return (
         <div>
